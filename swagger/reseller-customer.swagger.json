@@ -949,8 +949,24 @@
                 "MORE_THAN_1000"
             ]
         },
+        "attributesDesignation": {
+            "description": "- UNKNOWN_DESIGNATION: Designation is not specified\n - OWNER_FOUNDER_CEO: Owner/Founder/CEO\n - IT: IT\n - PRODUCT: Product\n - MARKETING: Marketing\n - PROCUREMENT: Procurement\n - SALES_BDR: Sales/BDR\n - OTHER_DESIGNATION: Other",
+            "type": "string",
+            "title": "The designation of reseller signing up",
+            "default": "UNKNOWN_DESIGNATION",
+            "enum": [
+                "UNKNOWN_DESIGNATION",
+                "OWNER_FOUNDER_CEO",
+                "IT",
+                "PRODUCT",
+                "MARKETING",
+                "PROCUREMENT",
+                "SALES_BDR",
+                "OTHER_DESIGNATION"
+            ]
+        },
         "attributesIndustry": {
-            "description": "- UNKNOWN_INDUSTRY: Industry is not specified\n - DOMAIN_REGISTRAR: Reseller's industry is domain registar\n - CLOUD_SERVICES: Reseller's industry is cloud services\n - MARKETING_AGENCIES: Reseller's industry is marketing agencies\n - NETWORKING_SERVICES: Reseller's industry is networking services\n - WEB_HOSTING: Reseller's industry is web hosting\n - SOFTWARE_DEVELOPMENT: Reseller's industry is software development\n - WEBSITE_BUILDERS: Reseller's industry is website builders\n - SECURITY_SERVICES: Reseller's industry is security services",
+            "description": "- UNKNOWN_INDUSTRY: Industry is not specified\n - DOMAIN_REGISTRAR: Reseller's industry is domain registar\n - CLOUD_SERVICES: Reseller's industry is cloud services\n - MARKETING_AGENCIES: Reseller's industry is marketing agencies\n - NETWORKING_SERVICES: Reseller's industry is networking services\n - WEB_HOSTING: Reseller's industry is web hosting\n - SOFTWARE_DEVELOPMENT: Reseller's industry is software development\n - WEBSITE_BUILDERS: Reseller's industry is website builders\n - SECURITY_SERVICES: Reseller's industry is security services\n - IT_SERVICES: Reseller's industry is IT services\n - FREELANCER: Reseller's industry is freelancing services",
             "type": "string",
             "title": "Reseller's industry",
             "default": "UNKNOWN_INDUSTRY",
@@ -963,7 +979,26 @@
                 "WEB_HOSTING",
                 "SOFTWARE_DEVELOPMENT",
                 "WEBSITE_BUILDERS",
-                "SECURITY_SERVICES"
+                "SECURITY_SERVICES",
+                "IT_SERVICES",
+                "FREELANCER"
+            ]
+        },
+        "attributesReferralSource": {
+            "description": "- UNKNOWN_REFERRAL_SOURCE: Referral source is not specified\n - SEARCH_ENGINE_RECOMMENDATION: Search Engine Recommendation\n - SOCIAL_MEDIA: Social Media\n - INTERNET_ADS: Internet Ads\n - EMAIL: Email\n - EVENT: Event\n - CUSTOMER_REVIEW_SITES: Customer Review Sites\n - PLATFORM_COMPARISON_SITES: Platform Comparison Sites\n - OTHER_REFERRAL_SOURCE: Other",
+            "type": "string",
+            "title": "The size of reseller's company",
+            "default": "UNKNOWN_REFERRAL_SOURCE",
+            "enum": [
+                "UNKNOWN_REFERRAL_SOURCE",
+                "SEARCH_ENGINE_RECOMMENDATION",
+                "SOCIAL_MEDIA",
+                "INTERNET_ADS",
+                "EMAIL",
+                "EVENT",
+                "CUSTOMER_REVIEW_SITES",
+                "PLATFORM_COMPARISON_SITES",
+                "OTHER_REFERRAL_SOURCE"
             ]
         },
         "contactAdditionalData": {
@@ -5583,6 +5618,10 @@
                     "title": "Current company size",
                     "$ref": "#/definitions/attributesCompanySize"
                 },
+                "designation": {
+                    "title": "Designation",
+                    "$ref": "#/definitions/attributesDesignation"
+                },
                 "fax": {
                     "title": "Fax number",
                     "$ref": "#/definitions/customerFax"
@@ -5616,6 +5655,10 @@
                     "title": "Phone number",
                     "$ref": "#/definitions/contactPhone"
                 },
+                "referral_source": {
+                    "title": "Referral source",
+                    "$ref": "#/definitions/attributesReferralSource"
+                },
                 "vat": {
                     "type": "string",
                     "title": "Domain owner's VAT number"
@@ -5639,6 +5682,7 @@
                 "comments": "",
                 "company_name": "Example company",
                 "company_size": "MORE_THAN_1000",
+                "designation": "UNKNOWN_DESIGNATION",
                 "fax": {
                     "area_code": "",
                     "country_code": "",
@@ -5661,6 +5705,7 @@
                     "country_code": "+03",
                     "subscriber_number": "123456"
                 },
+                "referral_source": "UNKNOWN_REFERRAL_SOURCE",
                 "vat": "XX123456789X13"
             }
         },

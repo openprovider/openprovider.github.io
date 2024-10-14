@@ -4876,6 +4876,16 @@
                     "title": "Domain name and extension",
                     "$ref": "#/definitions/domainDomain"
                 },
+                "import_contacts_from_registry": {
+                    "description": "Imports contacts data from registry and creates handles after the transfer. Allows to skip admin_handle, billing_handle, owner_handle, reseller_handle and tech_handle parameters.",
+                    "type": "boolean",
+                    "format": "boolean"
+                },
+                "import_nameservers_from_registry": {
+                    "description": "Imports nameservers from registry after the transfer. Allows to skip ns_group, ns_template_id and ns_template_name parameters.",
+                    "type": "boolean",
+                    "format": "boolean"
+                },
                 "is_dnssec_enabled": {
                     "type": "boolean",
                     "format": "boolean",
@@ -4984,6 +4994,8 @@
                     "extension": "london",
                     "name": "test4"
                 },
+                "import_contacts_from_registry": false,
+                "import_nameservers_from_registry": false,
                 "is_dnssec_enabled": false,
                 "is_private_whois_enabled": false,
                 "name_servers": [
@@ -5201,6 +5213,10 @@
                     "type": "string",
                     "title": "The law acceptance value should be set to 1\nApplicable to: .law"
                 },
+                "legal_type": {
+                    "type": "string",
+                    "title": "The legal type\nApplicable to: .ca"
+                },
                 "maintainer": {
                     "type": "string",
                     "title": "The maintainer value should be a string, specifying maintainer information. Maximum length 128 characters.\nApplicable to: .cat"
@@ -5249,6 +5265,7 @@
                 ],
                 "intended_use": "generic",
                 "law_acceptance": "",
+                "legal_type": "Individual",
                 "maintainer": "",
                 "membership_id": "A",
                 "mobile_phone_number_verification": "",
@@ -5407,6 +5424,7 @@
                     ],
                     "intended_use": "generic",
                     "law_acceptance": "",
+                    "legal_type": "Individual",
                     "maintainer": "",
                     "membership_id": "A",
                     "mobile_phone_number_verification": "",
