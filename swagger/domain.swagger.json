@@ -11,6 +11,10 @@
     "swagger": "2.0",
     "info": {
         "title": "Domain",
+        "contact": {
+            "name": "Domain contracts project",
+            "url": "https://github.com/openprovider/domain-contracts/issues"
+        },
         "version": "1.0.0-beta"
     },
     "paths": {
@@ -7222,5 +7226,9 @@
         {
             "Bearer": []
         }
-    ]
+    ],
+    "externalDocs": {
+        "description": "More about REST API v1",
+        "url": "https://docs.openprovider.com"
+    }
 }

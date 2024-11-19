@@ -11,6 +11,10 @@
     "swagger": "2.0",
     "info": {
         "title": "Mailcow",
+        "contact": {
+            "name": "Mailcow contracts project",
+            "url": "https://github.com/openprovider/mailcow-contracts/issues"
+        },
         "version": "1.0.0"
     },
     "paths": {
@@ -2813,5 +2817,9 @@
         {
             "Bearer": []
         }
-    ]
+    ],
+    "externalDocs": {
+        "description": "More about REST API v1",
+        "url": "https://docs.openprovider.com"
+    }
 }
