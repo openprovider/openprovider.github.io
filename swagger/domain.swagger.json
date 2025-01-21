@@ -11,6 +11,10 @@
     "swagger": "2.0",
     "info": {
         "title": "Domain",
+        "contact": {
+            "name": "Domain contracts project",
+            "url": "https://github.com/openprovider/domain-contracts/issues"
+        },
         "version": "1.0.0-beta"
     },
     "paths": {
@@ -1750,6 +1754,10 @@
                     "title": "Type of the domain owner document used to prove his identity (e.g. passport, driving license or else in case if domain owner is a private person; chamber of commerce extract, business certificate or else in case of legal entity)\nApplicable for all TLDs which require documents to complete operation with domain (e.g. .bg, .cn etc.)",
                     "$ref": "#/definitions/domainUINDocumentType"
                 },
+                "dk_acceptance": {
+                    "type": "string",
+                    "title": "The dk acceptance value should be set to 1\nApplicable to: .dk"
+                },
                 "domain_name_variants": {
                     "type": "array",
                     "title": "The domain name variants should be an array of strings, representing appropriate names\nApplicable to: .barcelona, .cat",
@@ -1884,6 +1892,7 @@
                     "description": "Singapore Personal Access ID",
                     "doc_type": "singpass"
                 },
+                "dk_acceptance": "",
                 "domain_name_variants": [
                     "xn--домен.cat"
                 ],
@@ -2285,6 +2294,12 @@
                     "title": "Enables or disables easy dmarc protection for this domain",
                     "default": false
                 },
+                "is_hosted_accreditation": {
+                    "type": "boolean",
+                    "format": "boolean",
+                    "title": "Enables or disables hosted accreditation route",
+                    "default": false
+                },
                 "is_private_whois_enabled": {
                     "type": "boolean",
                     "format": "boolean",
@@ -2372,6 +2387,7 @@
                         "description": "Singapore Personal Access ID",
                         "doc_type": "singpass"
                     },
+                    "dk_acceptance": "",
                     "domain_name_variants": [
                         "xn--домен.cat"
                     ],
@@ -2427,6 +2443,7 @@
                 },
                 "is_dnssec_enabled": false,
                 "is_easy_dmarc_enabled": false,
+                "is_hosted_accreditation": false,
                 "is_private_whois_enabled": false,
                 "is_sectigo_dns_enabled": false,
                 "is_spamexperts_enabled": false,
@@ -2499,6 +2516,7 @@
                             "description": "Singapore Personal Access ID",
                             "doc_type": "singpass"
                         },
+                        "dk_acceptance": "",
                         "domain_name_variants": [
                             "xn--домен.cat"
                         ],
@@ -2590,6 +2608,7 @@
                         "description": "Singapore Personal Access ID",
                         "doc_type": "singpass"
                     },
+                    "dk_acceptance": "",
                     "domain_name_variants": [
                         "xn--домен.cat"
                     ],
@@ -2788,6 +2807,7 @@
                             "description": "Singapore Personal Access ID",
                             "doc_type": "singpass"
                         },
+                        "dk_acceptance": "",
                         "domain_name_variants": [
                             "xn--домен.cat"
                         ],
@@ -3327,6 +3347,7 @@
                         "description": "Singapore Personal Access ID",
                         "doc_type": "singpass"
                     },
+                    "dk_acceptance": "",
                     "domain_name_variants": [
                         "xn--домен.cat"
                     ],
@@ -3635,6 +3656,7 @@
                                     "description": "Singapore Personal Access ID",
                                     "doc_type": "singpass"
                                 },
+                                "dk_acceptance": "",
                                 "domain_name_variants": [
                                     "xn--домен.cat"
                                 ],
@@ -3839,6 +3861,7 @@
                                 "description": "Singapore Personal Access ID",
                                 "doc_type": "singpass"
                             },
+                            "dk_acceptance": "",
                             "domain_name_variants": [
                                 "xn--домен.cat"
                             ],
@@ -4574,6 +4597,7 @@
                         "description": "Singapore Personal Access ID",
                         "doc_type": "singpass"
                     },
+                    "dk_acceptance": "",
                     "domain_name_variants": [
                         "xn--домен.cat"
                     ],
@@ -4891,6 +4915,12 @@
                     "format": "boolean",
                     "title": "Enables or disables DNSSEC on domain"
                 },
+                "is_hosted_accreditation": {
+                    "type": "boolean",
+                    "format": "boolean",
+                    "title": "Enables or disables hosted accreditation route",
+                    "default": false
+                },
                 "is_private_whois_enabled": {
                     "type": "boolean",
                     "format": "boolean",
@@ -4997,6 +5027,7 @@
                 "import_contacts_from_registry": false,
                 "import_nameservers_from_registry": false,
                 "is_dnssec_enabled": false,
+                "is_hosted_accreditation": false,
                 "is_private_whois_enabled": false,
                 "name_servers": [
                     {
@@ -7222,5 +7253,9 @@
         {
             "Bearer": []
         }
-    ]
+    ],
+    "externalDocs": {
+        "description": "More about REST API v1",
+        "url": "https://docs.openprovider.com"
+    }
 }

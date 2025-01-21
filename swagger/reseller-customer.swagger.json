@@ -11,6 +11,10 @@
     "swagger": "2.0",
     "info": {
         "title": "Reseller/Customer",
+        "contact": {
+            "name": "Person contracts project",
+            "url": "https://github.com/openprovider/person-contracts/issues"
+        },
         "version": "1.0.0-beta"
     },
     "paths": {
@@ -950,7 +954,7 @@
             ]
         },
         "attributesDesignation": {
-            "description": "- UNKNOWN_DESIGNATION: Designation is not specified\n - OWNER_FOUNDER_CEO: Owner/Founder/CEO\n - IT: IT\n - PRODUCT: Product\n - MARKETING: Marketing\n - PROCUREMENT: Procurement\n - SALES_BDR: Sales/BDR\n - OTHER_DESIGNATION: Other",
+            "description": "- UNKNOWN_DESIGNATION: Designation is not specified\n - OWNER_FOUNDER_CEO: Owner/Founder/CEO\n - IT: IT\n - PRODUCT: Product\n - MARKETING: Marketing\n - PROCUREMENT: Procurement\n - SALES_BDR: Sales/BDR\n - FINANCE: Finance\n - OTHER_DESIGNATION: Other",
             "type": "string",
             "title": "The designation of reseller signing up",
             "default": "UNKNOWN_DESIGNATION",
@@ -962,11 +966,12 @@
                 "MARKETING",
                 "PROCUREMENT",
                 "SALES_BDR",
+                "FINANCE",
                 "OTHER_DESIGNATION"
             ]
         },
         "attributesIndustry": {
-            "description": "- UNKNOWN_INDUSTRY: Industry is not specified\n - DOMAIN_REGISTRAR: Reseller's industry is domain registar\n - CLOUD_SERVICES: Reseller's industry is cloud services\n - MARKETING_AGENCIES: Reseller's industry is marketing agencies\n - NETWORKING_SERVICES: Reseller's industry is networking services\n - WEB_HOSTING: Reseller's industry is web hosting\n - SOFTWARE_DEVELOPMENT: Reseller's industry is software development\n - WEBSITE_BUILDERS: Reseller's industry is website builders\n - SECURITY_SERVICES: Reseller's industry is security services\n - IT_SERVICES: Reseller's industry is IT services\n - FREELANCER: Reseller's industry is freelancing services",
+            "description": "- UNKNOWN_INDUSTRY: Industry is not specified\n - DOMAIN_REGISTRAR: Reseller's industry is domain registar\n - CLOUD_SERVICES: Reseller's industry is cloud services\n - MARKETING_AGENCIES: Reseller's industry is marketing agencies\n - NETWORKING_SERVICES: Reseller's industry is networking services\n - WEB_HOSTING: Reseller's industry is web hosting\n - SOFTWARE_DEVELOPMENT: Reseller's industry is software development\n - WEBSITE_BUILDERS: Reseller's industry is website builders\n - SECURITY_SERVICES: Reseller's industry is security services\n - IT_SERVICES: Reseller's industry is IT services\n - FREELANCER: Reseller's industry is freelancing services\n - CYBERSECURITY: Reseller's industry is cybersecurity services\n - SOFTWARE_WEBSITE_DEVELOPMENT: Reseller's industry is Software/Website development services\n - OTHER: Reseller's industry is other services",
             "type": "string",
             "title": "Reseller's industry",
             "default": "UNKNOWN_INDUSTRY",
@@ -981,7 +986,10 @@
                 "WEBSITE_BUILDERS",
                 "SECURITY_SERVICES",
                 "IT_SERVICES",
-                "FREELANCER"
+                "FREELANCER",
+                "CYBERSECURITY",
+                "SOFTWARE_WEBSITE_DEVELOPMENT",
+                "OTHER"
             ]
         },
         "attributesReferralSource": {
@@ -5662,6 +5670,10 @@
                 "vat": {
                     "type": "string",
                     "title": "Domain owner's VAT number"
+                },
+                "website_url": {
+                    "type": "string",
+                    "title": "Website URL"
                 }
             },
             "example": {
@@ -5706,7 +5718,8 @@
                     "subscriber_number": "123456"
                 },
                 "referral_source": "UNKNOWN_REFERRAL_SOURCE",
-                "vat": "XX123456789X13"
+                "vat": "XX123456789X13",
+                "website_url": "https://abcd.com"
             }
         },
         "resellerUpdateResellerResponse": {
@@ -7761,5 +7774,9 @@
         {
             "Bearer": []
         }
-    ]
+    ],
+    "externalDocs": {
+        "description": "More about REST API v1",
+        "url": "https://docs.openprovider.com"
+    }
 }
